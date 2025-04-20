@@ -97,7 +97,7 @@
           <!-- Vista de Tarjetas -->
           @if (viewMode === 'grid') {
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-              @for (post of postsRs.value(); track post.id) {
+              @for (post of filteredPost(); track post.id) {
                 <div class="col">
                   <div class="card h-100 shadow-sm border-0">
                     <div class="card-header bg-light d-flex justify-content-between align-items-center">
