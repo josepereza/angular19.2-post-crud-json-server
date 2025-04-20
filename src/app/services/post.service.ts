@@ -1,6 +1,7 @@
 import { HttpClient, httpResource, HttpResourceRef } from '@angular/common/http';
 import { inject, Injectable, Signal } from '@angular/core';
 import { Post } from '../interfaces/post';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -26,6 +27,10 @@ export class PostService {
   
   deletePost(id:number){
     return this.http.delete(`${this.apiUrl}/${id}`)
+  }
+
+  updatePost(post: Post,id:number): Observable<Post> {
+    return this.http.put<Post>(`${this.apiUrl}/${id}`, post);
   }
 
 }

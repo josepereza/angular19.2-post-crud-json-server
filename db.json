@@ -7,12 +7,6 @@
       "id": 1
     },
     {
-      "userId": 2,
-      "id": 3,
-      "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
-      "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
-    },
-    {
       "userId": 3,
       "id": 4,
       "title": "eum et est occaecati",
@@ -26,14 +20,8 @@
     },
     {
       "userId": 1,
-      "id": 185,
-      "title": "tengo hambre",
-      "body": "jajajajjajajajaja"
-    },
-    {
-      "userId": 1,
-      "title": "no me gusta",
-      "body": "la carne de caballo roja",
+      "title": "caballo rojo",
+      "body": "la carne de caballo roja no me gusta",
       "id": 187
     },
     {
@@ -45,8 +33,14 @@
     {
       "userId": 1,
       "title": "pollos  y gallinas de corral",
-      "body": "me gustan los pollos caseros",
+      "body": "me gustan los pollos caseros y de corral tambien me gustan bastante",
       "id": 189
+    },
+    {
+      "userId": 1,
+      "title": "cerdos",
+      "body": "me gustan los cerdos caseros y de corral tambien me gustan bastante",
+      "id": 190
     }
   ],
   "users": [

@@ -7,7 +7,7 @@ export const routes: Routes = [
     { path: '', component: ListadoComponent },
   { path: 'posts', component: ListadoComponent },
    { path: 'post/new', component: FormPostComponent },
-//   { path: 'post/edit/:id', component: PostFormComponent },
+   { path: 'edit/:id_post', component: FormPostComponent },
    { path: 'post/:id', component: DetailsComponent },
   { path: '**', redirectTo: '' }
     

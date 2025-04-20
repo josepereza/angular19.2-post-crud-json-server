@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, computed, effect, inject, input } from '@angular/core';
 import { Post } from '../../interfaces/post';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { NgClass } from '@angular/common';
@@ -14,13 +14,19 @@ export class FormPostComponent {
   postForm!: FormGroup;
   submitted = false;
   success = false;
-  
+  id_post=input.required<number>()
   postService=inject(PostService)
 
+  postRs= this.postService.getPostRs(this.id_post)
+  mipost=effect(()=>{ this.postForm.patchValue(this.postRs.value() as Post)
+
+  })
   constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
     this.initForm();
+
+   
   }
 
   initForm(): void {
@@ -46,9 +52,19 @@ export class FormPostComponent {
     console.log('Datos del formulario:', postData);
     
     // Aquí iría la lógica para enviar los datos a un servicio
-    this.postService.addPost(postData).subscribe(data=>{
+
+    if (this.id_post()){
+
+      this.postService.updatePost(this.postForm.value as Post,this.id_post()).subscribe(data=>{
+        console.log(data)
+      })
+    }else {
+
+       this.postService.addPost(postData).subscribe(data=>{
       console.log(data)
     })
+    }
+   
     
     this.success = true;
     setTimeout(() => {

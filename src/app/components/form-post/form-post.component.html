@@ -4,7 +4,7 @@
       <div class="col-md-8">
         <div class="card shadow-sm">
           <div class="card-header bg-primary text-white">
-            <h4 class="mb-0">Información de Teruel</h4>
+            <h4 class="mb-0">Información del Post</h4>
           </div>
           <div class="card-body">
             @if (success) {
@@ -82,23 +82,7 @@
               </div>
   
               <!-- Campo id -->
-              <div class="mb-3">
-                <label for="id" class="form-label">ID de Publicación</label>
-                <input 
-                  type="number" 
-                  class="form-control" 
-                  id="id" 
-                  formControlName="id"
-                  [ngClass]="{'is-invalid': submitted && f['id'].errors}"
-                >
-                @if (submitted && f['id'].errors) {
-                  <div class="invalid-feedback">
-                    @if (f['id'].errors['required']) {
-                      <div>El ID de publicación es requerido</div>
-                    }
-                  </div>
-                }
-              </div>
+          
   
               <div class="d-flex gap-2 mt-4">
                 <button type="submit" class="btn btn-primary">
